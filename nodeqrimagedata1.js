@@ -6,4 +6,12 @@ const generateQR = async text =>{
 		console.log(err)
 	}
 }
-generateQR("https://shanmuganathna.netlify.com/");
+const readline = require('readline').createInterface({
+	input: process.stdin,
+	output: process.stdout
+  });
+  
+ readline.question('Type your URL : ', url => {
+	generateQR(url);
+	readline.close();
+  });
